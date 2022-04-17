@@ -1,4 +1,5 @@
-from databaseList import add_entry, get_entries
+# from databaseList import add_entry, get_entries
+from database import add_entry, create_table, get_entries
 
 menu = """Please select one of the following options:
 1) Add new entry for today.
@@ -16,14 +17,14 @@ def add_new_entry():
     add_entry(entry_content, entry_date)
 
 
-def view_entries(entries: list) -> None:
+def view_entries(entries) -> None:
     for entry in entries:
-        print(f"{entry['date']}:{entry['content']}\n\n")
+        print(f"{entry['date']}: {entry['content']}\n")
 
 
 print(welcome)
+create_table()
 
-# walrus operator  :=
 while (user_input := input(menu)) != "3":
     if user_input == "1":
         add_new_entry()

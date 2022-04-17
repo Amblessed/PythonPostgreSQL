@@ -1,2 +1,10 @@
 Course:
 https://www.udemy.com/course/complete-python-postgresql-database-course/
+
+
+# CREATE TABLE IF NOT EXISTS users
+# DROP TABLE IF EXISTS users
+
+*** SQL Injection ***
+SQL Injection attacks is when your programs are coded in such a way that users can execute any SQL code they want,
+without accessing your database directly
