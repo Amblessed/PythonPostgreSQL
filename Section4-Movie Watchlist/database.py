@@ -7,12 +7,6 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# title, release_date, watched
-# SELECT * FROM users WHERE surname LIKE 'Do%'
-#    '%th' matches anything ending with `th`
-#    'Do__s' matches anything starting with 'Do', ending with 's', and with two characters in between
-#    'Bo%b' matches anything starting with 'Bo', ending with 'b', and any number of characters in between
-#    '%sens%' matches anything containing 'sens', like 'sensibility' or 'insensible'
 CREATE_MOVIES_TABLE = "CREATE TABLE IF NOT EXISTS movies (id SERIAL PRIMARY KEY, title TEXT, release_timestamp REAL);"
 CREATE_USERS_TABLE = "CREATE TABLE IF NOT EXISTS users (username TEXT PRIMARY KEY);"
 CREATE_WATCHED_TABLE = """CREATE TABLE IF NOT EXISTS watched (user_username TEXT, movie_id INTEGER, FOREIGN KEY(user_username) REFERENCES users(username),

@@ -8,3 +8,19 @@ https://www.udemy.com/course/complete-python-postgresql-database-course/
 *** SQL Injection ***
 SQL Injection attacks is when your programs are coded in such a way that users can execute any SQL code they want,
 without accessing your database directly
+
+# title, release_date, watched
+# SELECT * FROM users WHERE surname LIKE 'Do%'
+#    '%th' matches anything ending with `th`
+#    'Do__s' matches anything starting with 'Do', ending with 's', and with two characters in between
+#    'Bo%b' matches anything starting with 'Bo', ending with 'b', and any number of characters in between
+#    '%sens%' matches anything containing 'sens', like 'sensibility' or 'insensible'
+
+
+*** ACID ***
+Atomicity, Consistency, Isolation and Durability
+-- Atomicity: this means that transactions are indivisible, every operation must happen successfully, or none do
+-- Consistency: The rules and constraints of the database are followed at all times. With foreign key constraints, you can't have
+a foreign key pointing to a non-existing primary key value. There are more constraints such as UNIQUE or NOT NULL
+-- Isolation: This means data is only visible in the database when the transaction has ended and committed.
+-- Durability: This means that data is saved to permanent storage once a transaction is committed

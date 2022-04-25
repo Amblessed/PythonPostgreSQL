@@ -1,6 +1,5 @@
 import os
 import psycopg2
-from psycopg2 import connection
 
 
 class DatabaseConnection:
@@ -10,7 +9,7 @@ class DatabaseConnection:
         self.__connection = None
         self.__hostname = hostname
 
-    def __enter__(self) -> connection:
+    def __enter__(self):
         self.__connection = psycopg2.connect(host=self.__hostname, dbname=os.environ['DATABASE_NAME'],
                                              user=os.environ['DATABASE_USERNAME'],
                                              password=os.environ['DATABASE_PASSWORD'],
